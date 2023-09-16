@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto:ital,wght@1,700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 5%;
+    background: url('./assets/backround-cats.jpg');
+    background-size: 25rem 25rem;
+
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.wrapper {
+    max-width: 45rem;
+    max-height: 50rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 3fr 1fr 2fr;
+    grid-template-rows: repeat(2, 10fr) 1fr;
+    
+}
+
+.slider {
+    overflow: hidden;
+    grid-column: 1/-1;
+    grid-row: 1/3;
+    border-radius: 1%;
+    border-radius: 1rem;
+    border: 0.2rem solid white;
+    outline: .2rem solid rgb(253, 236, 255)
+}
+
+.slides-wrapper {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.3s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-description {
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    overflow: hidden;
+    background-color: rgb(253, 236, 255);
+    outline: 0.1rem solid black;
+    border-radius: 1rem;
+
+    font-size: 1.5rem;
+}
+
+.slider-description:hover {
+    cursor: pointer;
+    transform: rotate(-10deg);
+    transition: transform 1s ease-in;
+}
+
+.sliders-description-wrapper {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    width: 20%;
+    transition: 0.3s;
+}
+
+.description span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/-1;
+    grid-row: 3/4;
+    padding: 0 .1rem 0 .1rem;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    background-color: rgb(253, 236, 255);
+}   
+
+label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
+.checkbox {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(150, 100, 155, 0.5);
+    outline: .15rem solid rgba(150, 100, 155, 0.5);
+}
+
+.btns:has(#btn-1:checked) ~ .slider .slide-1 {
+    margin-left: 0;
+}
+
+.btns:has(#btn-1:checked) ~ .slider-description .description-1 {
+    margin-left: 0;
+}
+
+.btns:has(#btn-2:checked) ~ .slider .slide-1 {
+    margin-left: -20%;
+}
+
+.btns:has(#btn-2:checked) ~ .slider-description .description-1 {
+    margin-left: -20%;
+}
+
+.btns:has(#btn-3:checked) ~ .slider .slide-1 {
+    margin-left: -40%;
+}
+
+.btns:has(#btn-3:checked) ~ .slider-description .description-1 {
+    margin-left: -40%;
+}
+
+.btns:has(#btn-4:checked) ~ .slider .slide-1 {
+    margin-left: -60%;
+}
+
+.btns:has(#btn-4:checked) ~ .slider-description .description-1 {
+    margin-left: -60%;
+}
+
+.btns:has(#btn-5:checked) ~ .slider .slide-1 {
+    margin-left: -80%;
+}
+
+.btns:has(#btn-5:checked) ~ .slider-description .description-1 {
+    margin-left: -80%;
+}
