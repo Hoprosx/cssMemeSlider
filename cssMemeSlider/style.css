@@ -139,7 +139,7 @@ label:has(input:checked) .checkbox:hover{
     background-color: rgba(150, 100, 155, 0.3);
 }
 
-label:has(input:checked) .checkbox:active {
+label:has(input:checked) .checkbox:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
@@ -200,4 +200,44 @@ input {
 
 .btns:has(#btn-5:checked) ~ .slider-description .description-1 {
     margin-left: -80%;
+}
+
+@media (max-width:46rem) {
+
+    body {
+        background-size: 15rem 15rem;
+
+    }
+
+    .wrapper {
+        max-width: 35rem;
+        max-height: 40rem;
+        grid-template-rows: repeat(2, 10fr) 1fr;
+        grid-template-columns: 3fr 1fr 3fr;
+        justify-content: center;
+        
+    }
+
+    .btns{
+        grid-column: 2/3;
+    } 
+
+    .slider-description {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+    }
+    
+}
+
+@media (max-width:31.25rem) {
+
+    .wrapper {
+        max-width: 25rem;
+        max-height: 30rem;
+        grid-template-rows: repeat(2, 10fr) 1fr;
+        grid-template-columns: 3fr 1fr 3fr;
+        justify-content: center;
+        
+    }
+    
 }
