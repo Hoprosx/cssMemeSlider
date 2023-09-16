@@ -135,11 +135,11 @@ label:has(input:checked) .checkbox {
     transform: none;
 }
 
-label:has(input:checked) .checkbox:hover{
+label:has(input:checked):hover .checkbox{
     background-color: rgba(150, 100, 155, 0.3);
 }
 
-label:has(input:checked) .checkbox:hover {
+label:has(input:checked):active .checkbox {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
